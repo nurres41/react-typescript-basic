@@ -16,11 +16,11 @@ function App() {
 
   const [goals, setGoals] = useState<CourseGoal[]>([]); 
 
-  function handleAddGoal() {
+  function handleAddGoal(goal:string,summary:string) {
     setGoals(prevGoals => {
       const newGoal: CourseGoal = {
-        title: 'Remix',
-        description: 'Ognren',
+        title: goal,
+        description: summary,
         id: Math.random(),
       };
       return [...prevGoals, newGoal];
